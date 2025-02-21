@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+<f:section title="企业微信通知配置">
+    <f:entry title="构建环境名称" help="/plugin/qy-wechat-notification/help-globalConfig-topicName.html">
+        <f:textbox name="topicName" value="${descriptor.getTopicName()}" />
+    </f:entry>
+    <f:entry title="默认Webhook地址" help="/plugin/qy-wechat-notification/help-globalConfig-webhookUrl.html">
+        <f:textbox name="webhookUrl" value="${descriptor.getWebhookUrl()}" />
+    </f:entry>
+    <f:entry title="默认通知UserID" help="/plugin/qy-wechat-notification/help-globalConfig-mentionedId.html">
+        <f:textbox name="mentionedId" value="${descriptor.getMentionedId()}" />
+    </f:entry>
+    <f:entry title="默认通知手机号码" help="/plugin/qy-wechat-notification/help-globalConfig-mentionedMobile.html">
+        <f:textbox name="mentionedMobile" value="${descriptor.getMentionedMobile()}" />
+    </f:entry>
+    <f:optionalBlock title="使用代理" field="useProxy" checked="${descriptor.getUseProxy()}">
+        <f:entry title="服务器">
+            <f:textbox name="proxyHost" value="${descriptor.getProxyHost()}" />
+        </f:entry>
+        <f:entry title="端口">
+            <f:number name="proxyPort" value="${descriptor.getProxyPort()}" />
+        </f:entry>
+        <f:entry title="用户名">
+            <f:textbox name="proxyUsername" value="${descriptor.getProxyUsername()}" />
+        </f:entry>
+        <f:entry title="密码">
+            <f:password name="proxyPassword" value="${descriptor.getProxyPassword()}" />
+        </f:entry>
+        <f:validateButton method="testProxy" title="测试连接" with="proxyHost,proxyPort,proxyUsername,proxyPassword" />
+    </f:optionalBlock>
+  </f:section>
+</j:jelly>
