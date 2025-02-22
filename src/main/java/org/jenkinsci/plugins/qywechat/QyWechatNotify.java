@@ -26,7 +26,7 @@ import java.security.NoSuchAlgorithmException;
  * 企业微信构建通知
  * @author jiaju
  */
-public class QyWechatNotification extends Publisher implements SimpleBuildStep {
+public class QyWechatNotify extends Publisher implements SimpleBuildStep {
 
     private String webhookUrl;
 
@@ -47,7 +47,7 @@ public class QyWechatNotification extends Publisher implements SimpleBuildStep {
     public static final DescriptorImpl DESCRIPTOR = new DescriptorImpl();
 
     @DataBoundConstructor
-    public QyWechatNotification() {
+    public QyWechatNotify() {
     }
 
     /**

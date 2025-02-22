@@ -97,7 +97,7 @@ public class BuildOverInfo {
             content.append(" >任务描述：<font color=\"comment\">" +  this.projectDescription + "</font>\n");
         }
         if (StringUtils.isNotEmpty(buildUser)) {
-            content.append(" >构建人：<font color=\"comment\">" +  this.buildUser + "</font>\n");
+            content.append(" >构建人员：<font color=\"comment\">" +  this.buildUser + "</font>\n");
         }
         content.append(" >构建用时：<font color=\"comment\">" +  this.useTimeString + "</font>\n");
 

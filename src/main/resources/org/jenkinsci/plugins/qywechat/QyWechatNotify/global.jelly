@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
-<f:section title="企业微信通知配置">
-    <f:entry title="构建环境名称" help="/plugin/qy-wechat-notification/help-globalConfig-topicName.html">
+<f:section title="企业微信通知配置(qyWechatNotify)">
+    <f:entry title="构建环境名称" help="/plugin/qy-wechat-notify/help-globalConfig-topicName.html">
         <f:textbox name="topicName" value="${descriptor.getTopicName()}" />
     </f:entry>
-    <f:entry title="默认Webhook地址" help="/plugin/qy-wechat-notification/help-globalConfig-webhookUrl.html">
+    <f:entry title="默认Webhook地址" help="/plugin/qy-wechat-notify/help-globalConfig-webhookUrl.html">
         <f:textbox name="webhookUrl" value="${descriptor.getWebhookUrl()}" />
     </f:entry>
-    <f:entry title="默认通知UserID" help="/plugin/qy-wechat-notification/help-globalConfig-mentionedId.html">
+    <f:entry title="默认通知UserID" help="/plugin/qy-wechat-notify/help-globalConfig-mentionedId.html">
         <f:textbox name="mentionedId" value="${descriptor.getMentionedId()}" />
     </f:entry>
-    <f:entry title="默认通知手机号码" help="/plugin/qy-wechat-notification/help-globalConfig-mentionedMobile.html">
+    <f:entry title="默认通知手机号码" help="/plugin/qy-wechat-notify/help-globalConfig-mentionedMobile.html">
         <f:textbox name="mentionedMobile" value="${descriptor.getMentionedMobile()}" />
     </f:entry>
     <f:optionalBlock title="使用代理" field="useProxy" checked="${descriptor.getUseProxy()}">
