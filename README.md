@@ -22,3 +22,13 @@ JDK 1.8
 ### moreinfo
 
 内容会拼接在默认打印内容下方
+
+
+## 测试
+
+> 通过远程调试设置可以设置断点
+
+启动jenkins,访问http://localhost:8080
+
+![img.png](img.png)
+
