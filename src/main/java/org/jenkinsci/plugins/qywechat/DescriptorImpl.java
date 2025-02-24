@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  * 数据绑定
  * @author jiaju
  */
-@Symbol("qyWechatNotify")
+@Symbol("qyWechatNotification")
 public class DescriptorImpl extends BuildStepDescriptor<Publisher> {
 
     private static final Logger logger = Logger.getLogger(DescriptorImpl.class.getName());
