@@ -2,4 +2,33 @@
 
 源项目地址：https://github.com/jenkinsci/qy-wechat-notification-plugin
 
-在此基础上对Build完成消息支持moreInfo、构建人、项目描述信息打印，以满足业务需求
+在原插件基础上对Build完成消息支持moreInfo、构建人、项目描述信息打印，以满足业务需求
+
+![demo](docs/demo.png)
+
+JDK 1.8
+
+## 使用方法
+
+### 默认打印内容
+
+任务描述、构建人员、构建用时
+
+任务描述：如果设置了就会打印
+
+![desc](docs/desc.png)
+
+
+### moreinfo
+
+内容会拼接在默认打印内容下方
+
+
+## 测试
+
+> 通过远程调试设置可以设置断点
+
+启动jenkins,访问http://localhost:8080
+
+![img.png](img.png)
+
