@@ -19,11 +19,11 @@
     <artifactId>plugin</artifactId>
     <version>4.31</version>
   </parent>
-  <artifactId>qy-wechat-notification</artifactId>
+  <artifactId>qy-wechat-notification-plus</artifactId>
   <version>1.1.5-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
-  <name>Qy Wechat Notification Plugin</name>
+  <name>Qy Wechat Notification Plugin Plus</name>
   <description>A build status notifier that sends notifications to Qy Wechat</description>
   <url>https://wiki.jenkins.io/display/JENKINS/Qy+Wechat+Notification+Plugin</url>
   <developers>

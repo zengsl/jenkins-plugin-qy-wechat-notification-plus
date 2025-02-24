@@ -18,18 +18,19 @@ import java.security.NoSuchAlgorithmException;
 import java.util.logging.Logger;
 
 /**
- * 数据绑定
+ * 仅临时用于pipeline模式下 通过顶级step配置发送通知，实现prebuild的效果
+ *
  * @author jiaju
  */
-@Symbol("qyWechatNotification")
-public class DescriptorImpl extends BuildStepDescriptor<Publisher> {
+@Symbol("qyWechatPreNotify")
+public class DescriptorPreImpl extends BuildStepDescriptor<Publisher> {
 
-    private static final Logger logger = Logger.getLogger(DescriptorImpl.class.getName());
+    private static final Logger logger = Logger.getLogger(DescriptorPreImpl.class.getName());
 
     private NotificationConfig config = new NotificationConfig();
 
-    public DescriptorImpl() {
-        super(QyWechatNotify.class);
+    public DescriptorPreImpl() {
+        super(QyWechatPreNotify.class);
         load();
     }
 
@@ -195,7 +196,7 @@ public class DescriptorImpl extends BuildStepDescriptor<Publisher> {
 
     @Override
     public String getDisplayName() {
-        return "企业微信通知-Plus";
+        return "企业微信通知-PlusPre";
     }
 
     @Override
