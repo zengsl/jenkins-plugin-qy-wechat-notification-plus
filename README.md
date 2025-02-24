@@ -4,4 +4,6 @@
 
 在原插件基础上对Build完成消息支持moreInfo、构建人、项目描述信息打印，以满足业务需求
 
-![demo](docs/img.png)
+![demo](docs/demo.png)
+
+JDK 1.8
