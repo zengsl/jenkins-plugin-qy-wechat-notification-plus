@@ -85,3 +85,21 @@ pipeline {
 
 ![img.png](img.png)
 
+
+### 本地调试
+
+- IDEA通过maven插件debug启动hpi:run
+
+- 在代码中直接打断点
+
+### 远程调试
+
+```shell
+export MAVEN_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+
+mvn hpi:run -Djetty.port=8090
+```
+
+## TODO
+
+- [ ] 提供更方便的方式来打印“预构建消息”
