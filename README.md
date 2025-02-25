@@ -2,7 +2,9 @@
 
 > 基于JDK 1.8
 
-基于原插件项目[https://github.com/jenkinsci/qy-wechat-notification-plugin](https://github.com/jenkinsci/qy-wechat-notification-plugin)，对业务需求做适应性改造，主要改动内容：
+## 背景
+
+原插件项目[https://github.com/jenkinsci/qy-wechat-notification-plugin](https://github.com/jenkinsci/qy-wechat-notification-plugin)，对业务需求做适应性改造，主要改动内容：
 
 - 在原插件基础上对Build完成消息支持moreInfo、构建人、项目描述信息打印，以满足业务需求
 - 在pipeline模式下，`qyWechatNotification`无法出发prebuild的“开始构建通知”。故提供`qyWechatPreNotify`，通过顶级step配置发送通知，实现prebuild的效果
@@ -58,8 +60,7 @@ pipeline {
 
 ### freestyle project
 
-配置qyWechatNotification即可
-
+配置`qyWechatNotification`即可
 
 
 
@@ -79,12 +80,9 @@ pipeline {
 
 ## 测试
 
-> 通过远程调试设置可以设置断点
-
-启动jenkins,访问http://localhost:8080
+hpi:run 启动jenkins,访问[http://localhost:8080](http://localhost:8080)
 
 ![img.png](img.png)
-
 
 ### 本地调试
 
@@ -103,3 +101,11 @@ mvn hpi:run -Djetty.port=8090
 ## TODO
 
 - [ ] 提供更方便的方式来打印“预构建消息”
+
+
+## 其他
+
+通过调用栈可知，pipeline模式下无法触发prebuild方法，解释了`qyWechatNotification`为何无法在pipeline模式下发送“开始构建消息”
+
+![pipelineStack](docs/img_1.png)
+![freeStyleStack](docs/img_2.png)
