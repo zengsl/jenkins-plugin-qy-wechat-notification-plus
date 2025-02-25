@@ -45,9 +45,9 @@
   </properties>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/qy-wechat-notification-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/qy-wechat-notification-plugin.git</developerConnection>
-    <url>http://github.com/jenkinsci/qy-wechat-notification-plugin</url>
+    <connection>scm:git:git://github.com/zengsl/jenkins-plugin-qy-wechat-notification-plus.git</connection>
+    <developerConnection>scm:git:git@github.com:zengsl/jenkins-plugin-qy-wechat-notification-plus.git</developerConnection>
+    <url>https://github.com/zengsl/jenkins-plugin-qy-wechat-notification-plus</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -83,3 +83,4 @@
   </dependencies>
 
 </project>
+
